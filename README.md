@@ -1,4 +1,7 @@
 # Cordova Plugin Pingpp
+
+This is forked from https://git.coding.net/pingplusplus/pingpp-cordova.git
+
 Ping++ 是为移动端应用以及 PC 网页量身打造的下一代支付系统，通过一个 SDK 便可以同时支持移动端以及 PC 端网页的多种主流支付渠道，你只需要一次接入即可完成多个渠道的接入。 Ping++ SDK 包括 Client SDK 和 Server SDK 两部分，支持主流的七种后端开发语言，适配了 Android，iOS 和 HTML5 三种移动端平台以及 PC 端网页。
 
 #### 支持以下渠道支付
@@ -9,17 +12,17 @@ Ping++ 是为移动端应用以及 PC 网页量身打造的下一代支付系统
 
 ## 插件安装
 ```sh
-$ cordova plugin add https://git.coding.net/pingplusplus/pingpp-cordova.git
+$ cordova plugin add https://github.com/xiaohui-zhangxh/pingpp-cordova.git
 ```
 
 ### 使用方法
 ```js
 /** 
  * 调用支付
- * @param object {"object":"charge 或 order" , "urlScheme":"YOU-URLSCHEME"}
+ * @param charge: charge generated from server side
  * @param function completionCallback  支付结果回调 (result, error)
  */
-Pingpp.createPayment(object, function (result, error) {
+Pingpp.createPayment(charge, function (result, error) {
     alert(result);
     alert(error);
 });
